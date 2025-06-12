@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap');
+
+.history-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.history-container h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.history-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.history-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.game-id {
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+}
+
+.opponent {
+  font-weight: bold;
+}
+
+.result {
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+.result.win {
+  background-color: rgba(76, 175, 80, 0.3);
+  color: #4caf50;
+}
+
+.result.loss {
+  background-color: rgba(244, 67, 54, 0.3);
+  color: #f44336;
+}
+
+.result.draw {
+  background-color: rgba(255, 193, 7, 0.3);
+  color: #ffc107;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.no-games {
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.history-actions {
+  margin-top: 2rem;
+}
+
+.back-button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: #fff;
+  display: inline-block;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.loading, .error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 1.5rem;
+}
+
+.error {
+  color: #f44336;
+}
+
+/* Placeholder message for coming soon */
+.placeholder-message {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.placeholder-message p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .history-item {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+  }
+  
+  .game-id, .opponent {
+    text-align: left;
+  }
+  
+  .result, .date {
+    text-align: right;
+  }
+}

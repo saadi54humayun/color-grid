@@ -1,0 +1,19 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ]
+// }
+
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",       // Use modern JSX transform
+    "esModuleInterop": true,  // Enable interoperability with CommonJS modules
+    "strict": true,           // Enforce strict type checking
+    "moduleResolution": "node", // Resolve modules like Node.js
+    "target": "es6",          // Target modern JavaScript
+    "module": "esnext"        // Use ES modules
+  },
+  "include": ["src"]
+}
